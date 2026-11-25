@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "payment.completed",
+  "description": "Published by payment-service when a payment attempt finishes. Schema version 2 renamed orderId -> orderRef and status COMPLETED -> SUCCEEDED.",
+  "type": "object",
+  "required": ["eventType", "schemaVersion", "paymentId", "orderRef", "amountMinor", "currency", "status"],
+  "properties": {
+    "eventType": {"const": "payment.completed"},
+    "schemaVersion": {"const": 2},
+    "paymentId": {"type": "string"},
+    "orderRef": {"type": "string"},
+    "amountMinor": {"type": "integer"},
+    "currency": {"type": "string"},
+    "status": {"enum": ["SUCCEEDED", "FAILED"]}
+  }
+}
