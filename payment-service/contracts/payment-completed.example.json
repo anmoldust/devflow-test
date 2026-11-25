@@ -1,0 +1,9 @@
+{
+  "eventType": "payment.completed",
+  "schemaVersion": 2,
+  "paymentId": "pay-5521",
+  "orderRef": "ord-7781",
+  "amountMinor": 4999,
+  "currency": "USD",
+  "status": "SUCCEEDED"
+}
